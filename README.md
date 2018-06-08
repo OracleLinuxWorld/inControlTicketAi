@@ -9,6 +9,7 @@ the below list outlines a number of the prime components used during the researc
 
 ## Documentation
 The documentation section is used to (A) provide a true documentation of the openICTA project and (B) serve as a research log during the creation project. In addition a private (non-open) research log will be maintained internally within the team for conducting real-life experimentation on connecting openICTA to existing ticket systems. The non-open research log might in the future be shared in the form of additional documentation and connectors to ticket systems, this however is not a guarantee or hard promise. 
+* [documentation](https://github.com/OracleLinuxWorld/inControlTicketAi/blob/master/openICTA/documentation/README.md)
 
 ## openICTA team
 The openICTA team consists primarily of people currently working within Capgemini and participatin in a innovation gamification challenge. The employment with Capgemini is a common bond however the work on openICTA is driven primarily as a open and private project with the ambition of building an open solution and experiment with new technology. The openICTA projetc is NOT an official Capgemini project and is only loosly sponsored by Capgemini in the form of providing coffee and meeting rooms to the team. 
