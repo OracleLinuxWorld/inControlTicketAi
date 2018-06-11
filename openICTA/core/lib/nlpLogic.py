@@ -25,6 +25,8 @@
 # import all needed libs 
 import spacy
 from spacy_cld import LanguageDetector
+#import en_core_web_sm
+from spacy.lang.en import English
 
 # function languageList
 # function languageList will return all languages available within the solution
@@ -51,9 +53,11 @@ def languageDetect( basetext ):
     print "ERROR; the value is not a string" 
   else:
     nlp = spacy.load('en')
-    language_detector = LanguageDetector()
-    nlp.add_pipe(language_detector)
-    doc = nlp(basetext)
+    # language_detector = LanguageDetector()
+    # nlp.add_pipe(language_detector)
+    # doc = nlp('This is some English text.')
+
+    print (basetext)
 
   return;
 
