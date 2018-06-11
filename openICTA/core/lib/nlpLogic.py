@@ -20,6 +20,7 @@
 # 08JUN18      johan.louwers@capgemini.com   release to github
 # 11JUN18      johan.louwers@capgemini.com   resolved unicode issue by ensuring
 #                                            import unicode_literals is in place 
+#                                            this was issue #6 in github
 # ----------------------------------------------------------------------------
 
 
