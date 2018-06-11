@@ -17,23 +17,29 @@
 # 08JUN18      johan.louwers@capgemini.com   creating a number of placeholders
 #                                            in the form of empty functions to
 #                                            ensure future development on them
-# 08JUN18      johan.lowuers@capgemini.com   release to github
-#
+# 08JUN18      johan.louwers@capgemini.com   release to github
+# 11JUN18      johan.louwers@capgemini.com   resolved unicode issue by ensuring
+#                                            import unicode_literals is in place 
 # ----------------------------------------------------------------------------
 
 
 # import all needed libs 
+from __future__ import unicode_literals
 import spacy
 from spacy_cld import LanguageDetector
 #import en_core_web_sm
 from spacy.lang.en import English
 
+
+
+# ----------------------------------------------------------------------------
 # function languageList
 # function languageList will return all languages available within the solution
 # this is more of a helper function and can potentially be used for building a
 # gui solution at a later moment in time. Code should get the lLanguageList
 # values in a more dynamic (config) based manner and should not rely on the 
 # hardcoded values as done in the initial release.   
+
 def languageList():
   lLanguageList = ['NL','US','DE']
   print '[%s]' % ', '.join(map(str, lLanguageList))
@@ -42,26 +48,34 @@ def languageList():
 
 
 
+# ----------------------------------------------------------------------------
 # function languageDetect
 # function languageDetect is used to detect the language of the provided string
-# to ensure you can select the correct langauge options for additional NLP based
-# operations. It is possible to inlcude language detection in your logic directly
-# or you can make sure you us languageDetect first and provide the outcome as 
-# input directly to another logic function within the code. 
-def languageDetect( basetext ):
-  if type(basetext) != str:
-    print "ERROR; the value is not a string" 
+
+def languageDetect( inputtext ):
+  if type(inputtext) != unicode:
+    print "ERROR; input value for languageDetect is not unicode" 
   else:
     nlp = spacy.load('en')
-    # language_detector = LanguageDetector()
-    # nlp.add_pipe(language_detector)
-    # doc = nlp('This is some English text.')
+    language_detector = LanguageDetector()
+    nlp.add_pipe(language_detector)
+    
+    doc = nlp(inputtext)
+    
+    returnLanguages = (doc._.languages)
+    returnScores = (doc._.language_scores['en'])    
 
-    print (basetext)
+  return returnLanguages;
 
-  return;
 
-languageDetect("abc");
-languageList();
 
+
+
+
+
+
+
+# ----------------------------------------------------------------------------
+# test code only for development work. Need to be removed after dev cycle.
+print (languageDetect("This is some English text."));
 
