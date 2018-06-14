@@ -15,7 +15,7 @@ The above image comes from the high level design used for development on openICT
 ## openICTA NLP classifier flow
 The NLP classifier is used to undertake NLP based actions on newly created tickets and forward the outcome in the form of a JSON object to the AI classifier. The NLP classifier is mainly based upon spaCy based python code and will be hosted in a "openICTA NLP" Oracle Linux based Docker container.
 ![NLP classifier](https://raw.githubusercontent.com/OracleLinuxWorld/inControlTicketAi/master/openICTA/documentation/docs/v01/openICTA_NLPclassifier.png "NLP classifier")
-The above image comes from the high level design used for development on openICTA. More information on the (NLP classifier)[nlp_classifier.md] can be found in the documentation
+The above image comes from the high level design used for development on openICTA. More information on the [NLP classifier](nlp_classifier.md) can be found in the documentation
 
 ## openICTA  classifier flow
 The AI classifier is used to undertake AI based actions on newly created tickets and return the results (predictions) back to the connector.
