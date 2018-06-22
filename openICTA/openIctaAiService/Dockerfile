@@ -15,7 +15,7 @@ RUN yum -y install git &&\
 git clone https://github.com/OracleLinuxWorld/inControlTicketAi /tmp/codedrop &&\
 mv -v /tmp/codedrop/openICTA/openIctaAiService/appcore/* /myprojectenv &&\
 chmod +x /myprojectenv/runappcore.sh &&\
-rm -r /tmp/codedrop/
+rm -r /tmp/codedrop/ &&\
 yum clean all &&\
 rm -rf /var/cache/yum/* &&\
 rm -rf /var/tmp/*
