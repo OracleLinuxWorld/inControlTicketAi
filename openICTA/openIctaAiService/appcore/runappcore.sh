@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # runappcore.sh is used as a script which is started by
 # the container to ensure you start gunicorn and the 
 # correct appcore code. The start of the appcore is done
